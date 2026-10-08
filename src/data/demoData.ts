@@ -17,10 +17,10 @@ export const demoServices: Service[] = [
         "price": "Rp 2.500.000",
         "unit": "/paket",
         "features": [
-          "",
-          "",
-          "",
-          ""
+          "Pemeriksaan kelengkapan dokumen",
+          "Review data perpajakan",
+          "Pendampingan persiapan pengajuan",
+          "Konsultasi dasar restitusi"
         ]
       },
       {
@@ -29,11 +29,11 @@ export const demoServices: Service[] = [
         "price": "Rp 5.000.000",
         "unit": "/paket",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Review dokumen dan data perpajakan",
+          "Pemeriksaan transaksi terkait",
+          "Persiapan dokumen restitusi",
+          "Pendampingan proses pengajuan",
+          "Konsultasi selama proses"
         ]
       },
       {
@@ -42,12 +42,12 @@ export const demoServices: Service[] = [
         "price": "Rp 8.000.000",
         "unit": "/paket",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Review komprehensif dokumen perpajakan",
+          "Analisis data dan transaksi",
+          "Persiapan dokumen pendukung",
+          "Pendampingan proses restitusi",
+          "Konsultasi dan monitoring proses",
+          "Pendampingan komunikasi terkait proses"
         ]
       },
       {
@@ -56,13 +56,13 @@ export const demoServices: Service[] = [
         "price": "Rp 12.500.000",
         "unit": "/paket",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Review menyeluruh data perpajakan",
+          "Analisis dokumen dan transaksi",
+          "Persiapan dokumen pendukung",
+          "Pendampingan proses restitusi",
+          "Monitoring proses",
+          "Konsultasi intensif",
+          "Pendampingan kebutuhan lanjutan"
         ]
       }
     ],
@@ -88,27 +88,27 @@ export const demoServices: Service[] = [
         "name": "SPT Pribadi Karyawan",
         "price": "Rp 249.000",
         "features": [
-          "",
-          "",
-          ""
+          "Pengolahan bukti potong",
+          "Pelaporan daftar harta",
+          "E-Filing DJP resmi"
         ]
       },
       {
         "name": "SPT Pribadi Usahawan",
         "price": "Rp 499.000",
         "features": [
-          "",
-          "",
-          ""
+          "Perhitungan PPh Final/NPPN",
+          "Rekap omzet bulanan",
+          "Pendampingan rekonsiliasi harta"
         ]
       },
       {
         "name": "SPT Badan UMKM",
         "price": "Rp 1.999.000",
         "features": [
-          "",
-          "",
-          ""
+          "Laporan laba rugi dan neraca",
+          "Rekonsiliasi pajak",
+          "Pengolahan bukti potong"
         ]
       }
     ],
@@ -136,10 +136,10 @@ export const demoServices: Service[] = [
         "price": "Rp 1.500.000",
         "unit": "/pengurusan",
         "features": [
-          "",
-          "",
-          "",
-          ""
+          "Konsultasi awal",
+          "Pemeriksaan dokumen",
+          "Pendampingan persiapan pengajuan",
+          "Panduan proses pengukuhan PKP"
         ]
       },
       {
@@ -148,11 +148,11 @@ export const demoServices: Service[] = [
         "price": "Rp 2.500.000",
         "unit": "/pengurusan",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Konsultasi perpajakan",
+          "Pemeriksaan kelengkapan dokumen",
+          "Review data perpajakan",
+          "Pendampingan proses pengajuan PKP",
+          "Monitoring proses"
         ]
       },
       {
@@ -161,12 +161,12 @@ export const demoServices: Service[] = [
         "price": "Rp 4.000.000",
         "unit": "/pengurusan",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Konsultasi perpajakan",
+          "Review dokumen dan data",
+          "Persiapan dokumen pendukung",
+          "Pendampingan proses pengajuan",
+          "Monitoring proses",
+          "Pendampingan kebutuhan lanjutan"
         ]
       },
       {
@@ -175,13 +175,13 @@ export const demoServices: Service[] = [
         "price": "Rp 6.000.000",
         "unit": "/pengurusan",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Konsultasi komprehensif",
+          "Review data dan dokumen perpajakan",
+          "Persiapan dokumen pendukung",
+          "Pendampingan proses pengajuan",
+          "Monitoring proses",
+          "Pendampingan kebutuhan lanjutan",
+          "Konsultasi lanjutan sesuai kebutuhan"
         ]
       }
     ],
@@ -209,9 +209,9 @@ export const demoServices: Service[] = [
         "price": "Rp 749.000",
         "unit": "/bulan",
         "features": [
-          "",
-          "",
-          ""
+          "Pelaporan SPT Masa PPh",
+          "Penyusunan laporan laba rugi",
+          "Rekonsiliasi transaksi"
         ]
       },
       {
@@ -220,9 +220,9 @@ export const demoServices: Service[] = [
         "price": "Rp 7.999.000",
         "unit": "/tahun",
         "features": [
-          "",
-          "",
-          ""
+          "Laporan pajak 12 bulan",
+          "SPT Tahunan Badan 1771",
+          "Laporan neraca dan laba rugi"
         ]
       },
       {
@@ -230,8 +230,8 @@ export const demoServices: Service[] = [
         "price": "Rp 499.000",
         "unit": "/laporan",
         "features": [
-          "",
-          ""
+          "Koreksi fiskal positif/negatif",
+          "Kertas kerja rekonsiliasi"
         ]
       },
       {
@@ -246,12 +246,12 @@ export const demoServices: Service[] = [
         "price": "Rp 4.999.000",
         "unit": "/perusahaan",
         "features": [
-          "",
-          "",
-          "",
-          "",
-          "",
-          ""
+          "Audit laporan keuangan",
+          "Penyusunan TPDoc",
+          "Pendampingan SP2DK",
+          "Tax opinion tertulis",
+          "Simulasi sanksi administrasi",
+          "Garansi bebas denda"
         ]
       }
     ],
@@ -278,7 +278,7 @@ export const demoServices: Service[] = [
         "price": "Rp 1.000.000",
         "unit": "per bulan",
         "features": [
-          ""
+          "Fitur contoh"
         ]
       }
     ],

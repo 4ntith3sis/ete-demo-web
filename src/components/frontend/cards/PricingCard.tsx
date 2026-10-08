@@ -22,11 +22,15 @@ export function PricingCard({ name, description, price, unit, features, consulta
         <>
           <h4>Keunggulan</h4>
           <ul>
-            {featureList.map((feature) => (
-              <li key={feature}>
-                <i className="fa-solid fa-circle-check" /> {feature}
-              </li>
-            ))}
+            {featureList.map((item, idx) => {
+              const text = typeof item === 'string' ? item : (item as { feature?: string; text?: string })?.feature ?? (item as { feature?: string; text?: string })?.text ?? '';
+              if (!text) return null;
+              return (
+                <li key={`${text}-${idx}`}>
+                  <i className="fa-solid fa-circle-check" /> {text}
+                </li>
+              );
+            })}
           </ul>
         </>
       ) : null}
