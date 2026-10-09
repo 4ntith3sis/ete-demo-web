@@ -8,10 +8,8 @@ import { ServiceHero } from "@/components/frontend/service/ServiceHero";
 import { PricingPackages } from "@/components/frontend/service/PricingPackages";
 import { ServiceFAQ } from "@/components/frontend/service/ServiceFAQ";
 import { ServiceCTA } from "@/components/frontend/service/ServiceCTA";
-import { RatingStats } from "@/components/frontend/shared/RatingStats";
-import { ClientsMarquee, IndonesiaBanner, MediaTrust, Testimonials } from "@/components/frontend/homepage";
+import { ClientsMarquee, HomepageTrustSections, IndonesiaBanner, MediaTrust, Testimonials } from "@/components/frontend/homepage";
 import { ServiceWorkflow } from "@/components/frontend/service/ServiceWorkflow";
-import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 
 export async function generateStaticParams() {
   const services = await getServices();
@@ -53,8 +51,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   return (
     <PageShell>
       <ServiceHero service={service} whatsappUrl={whatsappUrl} />
-      <RatingStats className="slug-rating-stats" />
-      <ServiceAdvantages />
+      <HomepageTrustSections />
       <PricingPackages service={service} whatsappUrl={whatsappUrl} />
       <ServiceWorkflow />
       <IndonesiaBanner whatsappUrl={whatsappUrl} />

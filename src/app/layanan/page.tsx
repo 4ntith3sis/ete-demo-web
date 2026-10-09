@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { PageShell } from "@/components/frontend/layout/PageShell";
 import { AboutHero } from "@/components/frontend/about/AboutHero";
-import { RatingStats } from "@/components/frontend/shared/RatingStats";
+import { HomepageTrustSections } from "@/components/frontend/homepage/HomepageTrustSections";
 import { ServiceGrid } from "@/components/frontend/service/ServiceGrid";
-import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 import {
   ClientsMarquee,
   HowItWorks,
@@ -46,9 +45,7 @@ export default async function ServicesPage() {
         imageAlt="Layanan Konsultan Pajak EasyTax"
       />
 
-      <RatingStats className="layanan-rating-stats" />
-
-      <ServiceAdvantages />
+      <HomepageTrustSections />
 
       <ServiceGrid services={services} />
 
