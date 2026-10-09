@@ -7,8 +7,8 @@ export function HomepageTrustSections() {
       <RatingStats
         className="homepage-rating-stats"
         variant="spotlight"
-        label="KEUNGGULAN EASYTAX"
-        title="Keunggulan Kami"
+        label="KEUNGGULAN KAMI"
+        title="Mengapa memilih EasyTax?"
         description="Solusi perpajakan yang terstruktur untuk membantu bisnis mengelola kewajiban pajak dan mengambil keputusan dengan lebih percaya diri."
         main={{
           icon: "fa-shield-halved",

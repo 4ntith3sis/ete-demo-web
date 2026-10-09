@@ -957,3 +957,44 @@
     transform: none;
   }
 }
+
+/* Phase 2.1 — compact homepage section rhythm and seamless statistics transition. */
+.hero-stats-section,
+.rating-stats-spotlight {
+  background: #f1f5f9;
+}
+
+.hero-stats-section {
+  padding-block: 28px;
+  border-bottom: 0;
+}
+
+.rating-stats-spotlight {
+  padding-block: 56px;
+}
+
+.showcase-section,
+.clients-marquee-section,
+.testimonials-marquee-section,
+.home-article-section,
+.trust-section {
+  padding-block: 64px;
+}
+
+@media (max-width: 768px) {
+  .hero-stats-section {
+    padding-block: 24px;
+  }
+
+  .rating-stats-spotlight {
+    padding-block: 44px;
+  }
+
+  .showcase-section,
+  .clients-marquee-section,
+  .testimonials-marquee-section,
+  .home-article-section,
+  .trust-section {
+    padding-block: 48px;
+  }
+}
