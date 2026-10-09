@@ -1920,6 +1920,8 @@ button {
     gap: 20px;
     transition: var(--transition);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
 
   .nav-menu.active {

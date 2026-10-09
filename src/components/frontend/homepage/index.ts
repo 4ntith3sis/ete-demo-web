@@ -7,3 +7,4 @@ export { ClosingCTA } from "./ClosingCTA";
 export { IndonesiaBanner } from "./IndonesiaBanner";
 export { ClientsMarquee } from "./ClientsMarquee";
 export { MediaTrust } from "./MediaTrust";
+export { ArticleSection } from "./ArticleSection";

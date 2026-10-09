@@ -1,16 +1,17 @@
 import { PageShell } from "@/components/frontend/layout/PageShell";
-import { Benefits, ClientsMarquee, ClosingCTA, Hero, HowItWorks, IndonesiaBanner, MediaTrust, Services, Testimonials } from "@/components/frontend/homepage";
+import { ArticleSection, Benefits, ClientsMarquee, ClosingCTA, Hero, HowItWorks, IndonesiaBanner, MediaTrust, Services, Testimonials } from "@/components/frontend/homepage";
 import { RatingStats } from "@/components/frontend/shared/RatingStats";
-import { getServices, getTestimonials, getClientLogos, getWhatsAppUrl } from "@/lib/cms";
+import { getServices, getTestimonials, getClientLogos, getWhatsAppUrl, getArticles } from "@/lib/cms";
 
 export const revalidate = 60;
 
 export default async function HomePage() {
-  const [services, testimonials, clients, whatsappUrl] = await Promise.all([
+  const [services, testimonials, clients, whatsappUrl, articles] = await Promise.all([
     getServices(),
     getTestimonials(),
     getClientLogos(),
     getWhatsAppUrl(),
+    getArticles(),
   ]);
 
   return (
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <ClientsMarquee clients={clients} />
       <MediaTrust />
       <Testimonials testimonials={testimonials} />
+      <ArticleSection articles={articles.slice(0, 6)} />
       <ClosingCTA whatsappUrl={whatsappUrl} />
     </PageShell>
   );
