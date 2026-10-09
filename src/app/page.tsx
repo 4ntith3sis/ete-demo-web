@@ -17,8 +17,28 @@ export default async function HomePage() {
   return (
     <PageShell>
       <Hero whatsappUrl={whatsappUrl} />
-      <RatingStats className="homepage-rating-stats" />
       <Benefits />
+      <RatingStats
+        className="homepage-rating-stats"
+        variant="spotlight"
+        label="BUKTI KEPERCAYAAN KLIEN"
+        title="Dipercaya oleh ribuan bisnis di Indonesia."
+        description="Solusi perpajakan yang profesional, praktis, dan terpercaya."
+        main={{
+          icon: "fa-users",
+          value: "13.000+",
+          label: "Klien Terlayani",
+          description: "Pengalaman mendampingi berbagai jenis bisnis.",
+          footerIcon: "fa-shield-halved",
+          footer: "Partner perpajakan Anda",
+        }}
+        stats={[
+          { icon: "fa-star", value: "4.9/5", label: "Rating Google", description: "700+ ulasan dari klien kami." },
+          { icon: "fa-clock", value: "Responsif", label: "Layanan Konsultasi", description: "Komunikasi sesuai jam layanan kami." },
+          { icon: "fa-shield-halved", value: "Terjaga", label: "Kerahasiaan Data", description: "Komitmen menjaga informasi klien." },
+          { icon: "fa-headset", value: "Profesional", label: "Tim Berpengalaman", description: "Didukung konsultan berizin dan berkompeten." },
+        ]}
+      />
       <Services services={services} />
       <HowItWorks />
       <IndonesiaBanner whatsappUrl={whatsappUrl} />

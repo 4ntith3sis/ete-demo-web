@@ -1,3 +1,30 @@
 import { SectionHeading } from "../shared/SectionHeading";
-const benefits = [["fa-bolt", "Praktis, Fleksibel & Cepat", "Layanan konsultasi dan pengerjaan laporan pajak yang fleksibel menyesuaikan kebutuhan perusahaan Anda secara cepat dan responsif."], ["fa-clock-rotate-left", "Efisien Waktu & Tenaga", "Anda tidak perlu repot mengurus administrasi perpajakan yang rumit, sehingga waktu dan tenaga Anda dapat fokus untuk scale-up bisnis."], ["fa-shield-cat", "Keamanan Data Terjamin", "Kami menjamin 100% kerahasiaan seluruh dokumen, data keuangan, dan informasi perpajakan perusahaan Anda."], ["fa-comments", "Gratis Konsultasi Legal", "Dapatkan sesi konsultasi dan edukasi mengenai kewajiban pajak perusahaan Anda langsung dengan tim konsultan ahli kami."], ["fa-tags", "Biaya Hemat & Terjangkau", "Penawaran harga layanan perpajakan dan akuntansi yang sangat kompetitif, transparan, dan sesuai skala bisnis UMKM maupun Korporat."], ["fa-bag-shopping", "Transaksi Aman", "Proses layanan dan komunikasi ditangani secara profesional dengan memperhatikan keamanan serta kerahasiaan informasi klien."]];
-export function Benefits() { return <section className="benefits-section" id="benefits"><div className="container"><SectionHeading badge="Kenapa Kami" title="Mengapa Memilih EasyTax?" description="Enam alasan utama mengapa ribuan pengusaha dan perusahaan mempercayakan urusan pajak kepada EasyTax." /><div className="benefits-grid-6">{benefits.map(([icon, title, description]) => <article className="benefit-card-clean" key={title}><div className="benefit-icon-circle"><i className={`fa-solid ${icon}`} /></div><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>; }
+
+const benefits = [
+  ["fa-bolt", "Praktis & Efisien", "Kurangi beban administrasi perpajakan agar Anda lebih fokus mengembangkan bisnis."],
+  ["fa-shield-halved", "Kerahasiaan Terjaga", "Komitmen menjaga kerahasiaan dokumen dan informasi bisnis klien."],
+  ["fa-wallet", "Biaya Transparan", "Informasi biaya layanan yang jelas sesuai kebutuhan bisnis Anda."],
+] as const;
+
+export function Benefits() {
+  return (
+    <section className="benefits-section" id="benefits">
+      <div className="container">
+        <SectionHeading
+          badge="Kenapa Kami"
+          title="Mengapa Memilih EasyTax?"
+          description="Solusi perpajakan yang praktis, aman, dan sesuai kebutuhan bisnis Anda."
+        />
+        <div className="benefits-premium-grid">
+          {benefits.map(([icon, title, description]) => (
+            <article className="benefit-premium-card" key={title}>
+              <div className="benefit-premium-icon"><i className={`fa-solid ${icon}`} /></div>
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

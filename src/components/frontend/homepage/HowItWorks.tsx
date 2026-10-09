@@ -14,7 +14,7 @@ const stepsData: Step[] = [
     num: "01",
     title: "Pilih Layanan",
     description:
-      "Dapatkan 30+ jenis layanan perpajakan & akuntansi sesuai kebutuhan bisnis Anda.",
+      "Dapatkan jenis layanan perpajakan & akuntansi sesuai kebutuhan bisnis Anda.",
     features: [
       "Transparansi harga sejak awal tanpa biaya tersembunyi",
       "Biaya sudah termasuk pendaftaran & e-filing resmi DJP",
@@ -323,7 +323,7 @@ export function HowItWorks() {
                       </div>
                       <div style={{ minWidth: 0 }}>
                         <div style={{ fontSize: 13, fontWeight: 900, color: "#1f2937", lineHeight: 1.2 }}>WhatsApp</div>
-                        <div style={{ fontSize: 11, fontWeight: 800, color: "#16a34a", marginTop: 2, lineHeight: 1 }}>Online 24/7</div>
+                        <div style={{ fontSize: 11, fontWeight: 800, color: "#16a34a", marginTop: 2, lineHeight: 1 }}>Chat Konsultan</div>
                       </div>
                     </div>
                     <div className="hiw-mini" style={{ border: "1px solid #f3f4f6", background: "#fff" }}>
