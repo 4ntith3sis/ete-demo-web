@@ -10,8 +10,8 @@ import { ServiceFAQ } from "@/components/frontend/service/ServiceFAQ";
 import { ServiceCTA } from "@/components/frontend/service/ServiceCTA";
 import { RatingStats } from "@/components/frontend/shared/RatingStats";
 import { ClientsMarquee, IndonesiaBanner, MediaTrust, Testimonials } from "@/components/frontend/homepage";
-import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 import { ServiceWorkflow } from "@/components/frontend/service/ServiceWorkflow";
+import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 
 export async function generateStaticParams() {
   const services = await getServices();

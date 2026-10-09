@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { PageShell } from "@/components/frontend/layout/PageShell";
 import { AboutHero } from "@/components/frontend/about/AboutHero";
 import { RatingStats } from "@/components/frontend/shared/RatingStats";
-import { TrustSection } from "@/components/frontend/shared/TrustSection";
 import { ServiceGrid } from "@/components/frontend/service/ServiceGrid";
+import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 import {
   ClientsMarquee,
   HowItWorks,
@@ -13,7 +13,6 @@ import {
 } from "@/components/frontend/homepage";
 import { getServices } from "@/lib/services/getServices";
 import { getTestimonials, getClientLogos, getWhatsAppUrl } from "@/lib/cms";
-import { layananTrustCards } from "@/data/mock/layanan";
 
 export const metadata: Metadata = {
   title: "Layanan Perpajakan & Akuntansi | EasyTax",
@@ -49,13 +48,7 @@ export default async function ServicesPage() {
 
       <RatingStats className="layanan-rating-stats" />
 
-      <TrustSection
-        id="keunggulan"
-        badge="KEUNGGULAN EASYTAX"
-        heading="Keunggulan Layanan EasyTax"
-        description="EasyTax hadir untuk membantu kebutuhan perpajakan Anda dengan layanan yang profesional, proses yang praktis, dan pendampingan yang terpercaya."
-        cards={layananTrustCards}
-      />
+      <ServiceAdvantages />
 
       <ServiceGrid services={services} />
 

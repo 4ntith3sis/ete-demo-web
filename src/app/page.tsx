@@ -1,6 +1,7 @@
 import { PageShell } from "@/components/frontend/layout/PageShell";
-import { ArticleSection, Benefits, ClientsMarquee, ClosingCTA, Hero, HowItWorks, IndonesiaBanner, MediaTrust, Services, Testimonials } from "@/components/frontend/homepage";
+import { ArticleSection, ClientsMarquee, ClosingCTA, Hero, HowItWorks, IndonesiaBanner, MediaTrust, Services, Testimonials } from "@/components/frontend/homepage";
 import { RatingStats } from "@/components/frontend/shared/RatingStats";
+import { ServiceAdvantages } from "@/components/frontend/service/ServiceAdvantages";
 import { getServices, getTestimonials, getClientLogos, getWhatsAppUrl, getArticles } from "@/lib/cms";
 
 export const revalidate = 60;
@@ -17,7 +18,7 @@ export default async function HomePage() {
   return (
     <PageShell>
       <Hero whatsappUrl={whatsappUrl} />
-      <Benefits />
+      <ServiceAdvantages />
       <RatingStats
         className="homepage-rating-stats"
         variant="spotlight"
