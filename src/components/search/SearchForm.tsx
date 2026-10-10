@@ -44,7 +44,7 @@ function HighlightedTitle({ title, query }: { title: string; query: string }) {
   return <>{parts}</>
 }
 
-export function SearchForm({ initialQuery = '' }: { initialQuery?: string }) {
+export function SearchForm({ initialQuery = '', wide = false }: { initialQuery?: string; wide?: boolean }) {
   const router = useRouter()
   const [query, setQuery] = React.useState(initialQuery)
   const [suggestOpen, setSuggestOpen] = React.useState(false)
@@ -142,11 +142,11 @@ export function SearchForm({ initialQuery = '' }: { initialQuery?: string }) {
 
   return (
     <div>
-      <div ref={wrapRef} style={{ position: 'relative', maxWidth: 576 }}>
+      <div ref={wrapRef} style={{ position: 'relative', maxWidth: wide ? 'none' : 576 }}>
       <form className="article-search" onSubmit={runSearch} role="search" style={{ position: 'relative', marginTop: 32, maxWidth: 'none' }}>
         <i className="fa-solid fa-magnifying-glass" />
         <input
-          placeholder="Cari artikel perpajakan (mis. SPT Badan, PKP, TER PPh 21)..."
+          placeholder="Cari artikel perpajakan, akuntansi, atau keuangan bisnis..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => { if (suggestions.length > 0 || suggestError) setSuggestOpen(true) }}

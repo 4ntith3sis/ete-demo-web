@@ -1,9 +1,9 @@
 import { RatingStats } from "../shared/RatingStats";
 
-export function HomepageTrustSections() {
+export function HomepageTrustSections({ showStats = true }: { showStats?: boolean }) {
   return (
     <>
-      <RatingStats variant="minimal" className="homepage-hero-stats" />
+      {showStats ? <RatingStats variant="minimal" className="homepage-hero-stats" /> : null}
       <RatingStats
         className="homepage-rating-stats"
         variant="spotlight"

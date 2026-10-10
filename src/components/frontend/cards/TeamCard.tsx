@@ -12,10 +12,10 @@ export function TeamCard({ member }: { member: AboutTeamMember }) {
         <Image src={photo} alt={name} fill sizes="20vw" className="team-img" />
       </div>
       <div className="team-info">
-        <span>LICENSED TAX CONSULTANT</span>
+        {licenseLevel ? <span className="team-professional-label">LICENSED TAX CONSULTANT</span> : null}
         <h3>{name}</h3>
-        <p>{position}</p>
-        <strong className="team-license">Lisensi Konsultan Pajak: {licenseLevel}</strong>
+        <p className="team-position">{position}</p>
+        {licenseLevel ? <strong className="team-license"><i className="fa-solid fa-certificate" aria-hidden="true" /> Lisensi Konsultan Pajak: {licenseLevel}</strong> : null}
         <p className="team-bio">{bio}</p>
       </div>
     </article>

@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/Button";
 export type AboutHeroCrumb = { label: string; href?: string };
 
 type AboutHeroProps = {
+  className?: string;
+  floatingStats?: { icon: string; value: string; label: string }[];
+  showPrimaryCta?: boolean;
   crumbs: AboutHeroCrumb[];
   badge: string;
   title: ReactNode;
@@ -23,6 +26,12 @@ type AboutHeroProps = {
  * hanya content (teks/CTA/image) yang dipassing per halaman.
  */
 export function AboutHero({ whatsappUrl,
+  className = "",
+  floatingStats = [
+    { icon: "fa-user-check", value: "13.000+", label: "Bisnis Terlayani" },
+    { icon: "fa-star", value: "4.9 / 5.0", label: "Rating Google (700+)" },
+  ],
+  showPrimaryCta = true,
   crumbs,
   badge,
   title,
@@ -34,7 +43,7 @@ export function AboutHero({ whatsappUrl,
   imageAlt,
 }: AboutHeroProps & { whatsappUrl?: string }) {
   return (
-    <section className="about-hero-section about-page-hero">
+    <section className={`about-hero-section about-page-hero ${className}`.trim()}>
       <div className="container">
         <div className="about-hero-grid">
           <div>
@@ -58,9 +67,11 @@ export function AboutHero({ whatsappUrl,
             <h1>{title}</h1>
             <p>{description}</p>
             <div className="hero-btn-row">
-              <Button href={whatsappUrl ?? "https://mauorder.online/easytaxwebsite"} external className="btn-primary">
-                Konsultasi Gratis <i className="fa-solid fa-arrow-right" />
-              </Button>
+              {showPrimaryCta ? (
+                <Button href={whatsappUrl ?? "https://mauorder.online/easytaxwebsite"} external className="btn-primary">
+                  Konsultasi Gratis <i className="fa-solid fa-arrow-right" />
+                </Button>
+              ) : null}
               <Button href={secondaryCtaHref} className="btn-outline-white">
                 {secondaryCtaLabel}
               </Button>
@@ -82,18 +93,14 @@ export function AboutHero({ whatsappUrl,
               priority
               style={{ objectFit: "cover" }}
             />
-            <div className="about-floating-stat">
-              <i className="fa-solid fa-user-check" />
-              <strong>
-                13.000+<small>Bisnis Terlayani</small>
-              </strong>
-            </div>
-            <div className="about-floating-stat bottom">
-              <i className="fa-solid fa-star" />
-              <strong>
-                4.9 / 5.0<small>Rating Google (700+)</small>
-              </strong>
-            </div>
+            {floatingStats.map((stat, index) => (
+              <div className={`about-floating-stat${index > 0 ? " bottom" : ""} floating-stat-${index + 1}${className.includes("article-listing-hero") ? " article-floating-badge" : ""}`} key={`${stat.value}-${stat.label}`}>
+                <i className={`fa-solid ${stat.icon}`} />
+                <strong>
+                  {stat.value}<small>{stat.label}</small>
+                </strong>
+              </div>
+            ))}
           </div>
         </div>
       </div>

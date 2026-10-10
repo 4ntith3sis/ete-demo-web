@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SearchForm } from "@/components/search/SearchForm";
+import { AboutHero } from "@/components/frontend/about/AboutHero";
 import { ArticleCard } from "@/components/frontend/cards/ArticleCard";
 import { Button } from "@/components/ui/Button";
 import type { Article } from "@/types/article";
@@ -39,23 +40,38 @@ export function ArticleListing({
 }) {
   return (
     <>
-      <section className="article-listing-hero">
+      <AboutHero
+        className="article-listing-hero"
+        whatsappUrl={whatsappUrl}
+        crumbs={[{ label: "Beranda", href: "/" }, { label: "Artikel & Edukasi Perpajakan" }]}
+        badge="PUSAT EDUKASI PAJAK & AKUNTANSI"
+        title={<>Wawasan Bisnis &amp; Perpajakan untuk <span>Keputusan yang Lebih Tepat</span></>}
+        description="Temukan informasi dan wawasan seputar perpajakan, akuntansi, serta pengelolaan bisnis untuk mendukung keputusan usaha Anda."
+        showPrimaryCta={false}
+        secondaryCtaLabel="Jelajahi Artikel ↓"
+        secondaryCtaHref="#article-grid"
+        trustItems={["Pahami Aturan Pajak", "Temukan Solusi Praktis", "Kelola Bisnis Lebih Baik"]}
+        floatingStats={[
+          { icon: "fa-lightbulb", value: "Informasi praktis", label: "" },
+          { icon: "fa-language", value: "Bahasa mudah dipahami", label: "" },
+          { icon: "fa-briefcase", value: "Relevan bagi pelaku usaha", label: "" },
+        ]}
+        imageSrc="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=80"
+        imageAlt="Dokumen laporan keuangan dan kalkulator untuk analisis bisnis"
+      />
+      <section className="article-search-section" id="article-search">
         <div className="container">
-          <nav className="article-breadcrumb"><a href="/"><i className="fa-solid fa-house" /> Beranda</a><span>&gt;</span><strong>Artikel &amp; Edukasi Perpajakan</strong></nav>
-          <div className="hero-tag-pill-figma"><span /> Pusat Edukasi Perpajakan &amp; Akuntansi</div>
-          <h1>Artikel &amp; Wawasan Perpajakan Perusahaan</h1>
-          <p>Dapatkan panduan praktis perpajakan, analisis regulasi Ditjen Pajak (DJP) terbaru, tips strategi pembukuan keuangan, dan solusi bebas denda pajak untuk bisnis Anda.</p>
-          <SearchForm />
-        </div>
-      </section>
-      <section className="blog-section article-grid-section">
-        <div className="container">
+          <SearchForm wide />
           <div className="article-filters">
             <Link href={pageHref(1)} className={!activeCategory ? "active" : undefined} style={{ textDecoration: "none" }}><button type="button" className={!activeCategory ? "active" : undefined}>Semua Artikel</button></Link>
             {categories.map((category) => (
               <Link key={category.slug} href={pageHref(1, category.slug)} style={{ textDecoration: "none" }}><button type="button" className={activeCategory === category.slug ? "active" : undefined}>{category.name}</button></Link>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="blog-section article-grid-section" id="article-grid">
+        <div className="container">
           {articles.length === 0 ? (
             <p style={{ gridColumn: "1/-1", textAlign: "center", color: "#64748b" }}>Belum ada artikel.</p>
           ) : (
